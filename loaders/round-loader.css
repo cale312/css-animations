@@ -1,0 +1,25 @@
+.round-loader {
+    border: solid 10px;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    border-radius: 100%;
+    animation: linear 2s spin infinite;
+    border-top: solid 10px #2121;
+    border-bottom: solid 10px #5A5A5A;
+    color: #777;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1.5);
+    }
+    
+    50% {
+        transform: rotate(180deg) scale(0.9);
+    }
+    
+    100% {
+        transform: rotate(360deg) scale(1.5);
+    }
+}
