@@ -18,3 +18,28 @@ var bounce = () => {
 }
 
 bounce();
+
+// bilnking eyes animation
+
+var eyes = document.querySelectorAll(".eye");
+let x = 0;
+
+var blink = () => {
+    setInterval(() => {
+        if (x === 0) {
+            eyes.forEach((elem) => {
+                elem.classList.add("blink");
+            });
+            x += 1;
+        } else {
+            setTimeout(() => {
+                eyes.forEach((elem) => {
+                    elem.classList.remove("blink");
+                    x = 0;
+                });
+            })
+        }
+    }, 1000);
+}
+
+blink();
